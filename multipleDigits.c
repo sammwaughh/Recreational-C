@@ -27,12 +27,6 @@ int multipleDigits(int n) {
         n /= 10;
     }
     return 0;
-    /*for (int i = 0; i < 10; i++) {
-        if (counts[i] > 1) {
-            return 1;
-        }
-    }*/
-    return 0;
 }
 
 void printArray(int nums[], int len) {
