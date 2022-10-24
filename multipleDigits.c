@@ -4,7 +4,7 @@ int multipleDigits(int n);
 void printArray(int nums[], int len);
 
 int main(int argc, char *argv[]) {
-    int input = 67827;
+    int input = 67824;
     int output = multipleDigits(input);
     if (output == 0) {
         printf("No\n");
@@ -19,14 +19,19 @@ int multipleDigits(int n) {
     int counts[10] = {0};
     while (n != 0) {
         unit = n % 10;
-        counts[unit] += 1;
+        if (counts[unit] == 1) {
+            return 1;
+        } else {
+            counts[unit] = 1;
+        }
         n /= 10;
     }
-    for (int i = 0; i < 10; i++) {
+    return 0;
+    /*for (int i = 0; i < 10; i++) {
         if (counts[i] > 1) {
             return 1;
         }
-    }
+    }*/
     return 0;
 }
 
