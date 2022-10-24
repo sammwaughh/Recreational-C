@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int multipleDigits(int n);
+void printArray(int nums[], int len);
 
 int main(int argc, char *argv[]) {
     int input = 67827;
@@ -14,5 +15,26 @@ int main(int argc, char *argv[]) {
 }
 
 int multipleDigits(int n) {
+    int unit;
+    int counts[10] = {0};
+    while (n != 0) {
+        unit = n % 10;
+        counts[unit] += 1;
+        n /= 10;
+    }
+    for (int i = 0; i < 10; i++) {
+        if (counts[i] > 1) {
+            return 1;
+        }
+    }
     return 0;
+}
+
+void printArray(int nums[], int len) {
+    int i;
+    printf("[");
+    for (i = 0; i < len-1; i++) {
+        printf("%d, ", nums[i]);
+    }
+    printf("%d]\n", nums[i]);
 }
