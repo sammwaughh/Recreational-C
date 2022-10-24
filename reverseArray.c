@@ -14,10 +14,11 @@ int main(int argc, char *argv[]) {
 
 void printArray(int nums[], int len) {
     int i;
+    printf("[");
     for (i = 0; i < len-1; i++) {
         printf("%d, ", nums[i]);
     }
-    printf("%d\n", nums[i]);
+    printf("%d]\n", nums[i]);
 }
 
 void reverse(int nums[], int len) {
