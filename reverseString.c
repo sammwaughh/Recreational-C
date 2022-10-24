@@ -4,6 +4,10 @@
 void reverse(char s[], int len);
 
 int main(int argc, char *argv[]) {
+    if (argc < 2) {
+        printf("Enter a string to reverse as input\n");
+        return 1;
+    }
     char s[1000];
     strcpy(s, argv[1]);
     int len = strlen(s);
