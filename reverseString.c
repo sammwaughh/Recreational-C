@@ -11,9 +11,9 @@ int main(int argc, char *argv[]) {
     char s[1000];
     strcpy(s, argv[1]);
     int len = strlen(s);
-    printf("Original: %s\t", s);
+    printf("Original: \"%s\"\t", s);
     reverse(s, len);
-    printf("Reversed: %s\n", s);
+    printf("Reversed: \"%s\"\n", s);
     return 0;
 }
 
