@@ -4,7 +4,8 @@
 void reverse(char s[], int len);
 
 int main(int argc, char *argv[]) {
-    char s[] = argv[1];
+    char s[1000];
+    strcpy(s, argv[1]);
     int len = strlen(s);
     printf("Original: %s\t", s);
     reverse(s, len);
@@ -13,8 +14,8 @@ int main(int argc, char *argv[]) {
 }
 
 void reverse(char s[], int len) {
-    int i = 0
-    int j = len;
+    int i = 0;
+    int j = len-1;
     char t;
     while (i < j) {
         t = s[i];
