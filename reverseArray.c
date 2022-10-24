@@ -2,6 +2,7 @@
 #include <string.h>
 
 void reverse(int nums[], int len);
+void printArray(int nums[], int len);
 
 int main(int argc, char *argv[]) {
     int nums[9] = {34, 56, 54, 32, 67, 89, 90, 32, 21};
@@ -21,7 +22,7 @@ void printArray(int nums[], int len) {
 
 void reverse(int nums[], int len) {
     int i = 0;
-    int j = len;
+    int j = len-1;
     int t;
     while (i < j) {
         t = nums[i];
